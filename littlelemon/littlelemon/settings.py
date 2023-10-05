@@ -90,7 +90,15 @@ DATABASES = {
         'OPTIONS': {   
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
         } 
-    }
+    },
+    'test': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',  # Your test database name
+    #     'USER': 'admin',
+    #     'PASSWORD': 'Emp@LL123',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    },
 }
 
 
