@@ -10,8 +10,7 @@ class MenuViewTest(TestCase):
     def setUp(self):
         items = models.Menu.objects.all()
         self.menu = [json.dumps(item) for item in items]
-        
         self.client = APIClient()
     def test_getall(self):
-        response = self.client.get(reverse('restaurant:menu-list'))
+        response = self.client.get(reverse('api:menu-list'))
         self.assertEqual(self.menu, response.data)
