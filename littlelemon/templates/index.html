@@ -24,13 +24,54 @@
 <body>
    <header>
       <nav class="navbar">
-        <img src="{% static 'restaurant/littlelemon.png' %}" alt="">
-        
+        <img src="{% static 'restaurant/littlelemon.png' %}" alt="" width="30%" height="15%">
       </nav>
    </header>
     <main>
         <section>
          <h1>Welcome to Our Restaurant</h1>
+
+         <h2>API Endpoints</h2>
+
+    <!-- Create a table to display the API endpoints -->
+    <table border="1" align="center">
+      <tr>
+            <th>Endpoint</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="/api/menu" target="_blank">/api/menu</a></td>
+            <td>Browse menu items</td>
+        </tr>
+        <tr>
+            <td><a href="/api/menu" target="_blank">/api/menu</a> (POST)</td>
+            <td>Add new menu item</td>
+        </tr>
+        <tr>
+            <td><a href="/api/menu/pk" target="_blank">/api/menu/pk</a></td>
+            <td>Get a specific item</td>
+        </tr>
+        <tr>
+            <td><a href="/booking/tables" target="_blank">/booking/tables</a> (Token-Authentication required)</td>
+            <td>Secure table booking</td>
+        </tr>
+        <tr>
+            <td><a href="/auth/users" target="_blank">/auth/users</a> (POST)</td>
+            <td>Register new users</td>
+        </tr>
+        <tr>
+            <td><a href="/auth/token/login" target="_blank">/auth/token/login</a> (POST)</td>
+            <td>Get authentication token</td>
+        </tr>
+        <tr>
+            <td><a href="/api-token-auth/" target="_blank">/api-token-auth/</a> (POST)</td>
+            <td>Get authentication token (alternative)</td>
+        </tr>
+        <tr>
+            <td><a href="/auth/token/logout" target="_blank">/auth/token/logout</a> (POST)</td>
+            <td>Log out</td>
+        </tr>
+    </table>
         </section>
     </main>
     
