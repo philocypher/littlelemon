@@ -21,6 +21,7 @@ from restaurant import views
 # from djoser import views as djoser
 #DRF
 from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
 router = routers.SimpleRouter()
 router.register(r'tables', views.BookingsViewSet)
@@ -28,8 +29,10 @@ router.register(r'tables', views.BookingsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls')),
+    path('api/', include('restaurant.urls')),
     path('booking/',include(router.urls)),
     path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken'))
+    path('auth/', include('djoser.urls.authtoken')),
+    path('api-token-auth/', obtain_auth_token)
+
 ]
